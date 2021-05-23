@@ -57,6 +57,7 @@ if(url === '/login' && method === 'POST'){
 
 
         if(username === 'yinka' && password === 'pass'){
+            fs.writeFileSync('yinka.txt', 'hello '+username+', Your login was successful')
             res.statusCode = 302;
             res.setHeader('location', 'dashboard');
             return res.end();
